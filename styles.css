@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#myCanvas {
+  background-color: #000000;
+  position: absolute;
+  z-index: 3;
+  margin: 150px 5px;
+}
+
+#main {
+  margin: 10px auto;
+  position: relative;
+  height: 1000px;
+  width: 1000px;
+}
+/* 
+#arcade {
+  background-image: url('./snake-bkg.png');
+  background-repeat: no-repeat;
+  width: 800px;
+  height: 800px;
+  margin: 100px 100px;
+  position: absolute;
+  z-index: 5;
+} */
+
+@font-face {
+  font-family: 'ArcadeClassic';
+  src: url('ARCADECLASSIC.TTF');
+}
+
+#nameBox {
+  width: 60px;
+  height: 20px;
+  z-index: 5;
+  position: absolute;
+  background-color: #000000;
+  top: 310px;
+  left: 550px;
+  font-size: 30px;
+  font-family: 'ArcadeClassic';
+  color: white;
+}
+
+.modes {
+  position: absolute;
+  top: 310px;
+  left: 150px;
+  z-index: 3;
+}
+
+.difficulty {
+  margin-left: 100px;
+  display: inline-block;
+  font-family: 'ArcadeClassic';
+  color: white;
+  font-size: 20px;
+}
+
+.difficulty:hover {
+  cursor: pointer;
+}
