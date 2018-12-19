@@ -22,12 +22,14 @@ var hard = document.getElementById('hard')
 var all = document.getElementById('all')
 var dx = 3
 var length = 151
+var difficulty = 'Easy'
 
 //add event listener
 function startGame() {
   let localTime = Math.round(time / 60)
   let speed
   easy.addEventListener('click', function(event) {
+    difficulty = 'Easy'
     paused = false
     music = new Audio('./music/Fantasia.mp3')
     speed = 1000
@@ -36,6 +38,7 @@ function startGame() {
     length = 151
   })
   medium.addEventListener('click', function(event) {
+    difficulty = 'medium'
     paused = false
     music = new Audio('./music/Cadmium.mp3')
     speed = 500
@@ -44,6 +47,7 @@ function startGame() {
     length = 193
   })
   hard.addEventListener('click', function(event) {
+    difficulty = 'Hard'
     paused = false
     music = new Audio('./music/WhyWeLose.mp3')
     speed = 300
@@ -72,6 +76,7 @@ function startGame() {
     //   dx = 5
     //   length = 151 + 193 + 213
     // }
+    difficulty = 'All'
     paused = false
     music = new Audio('./music/mix.mp3')
     speed = 450
@@ -103,8 +108,6 @@ var chain = 0
 var highestChain = 0
 var paused = true
 var gameEnd = false
-var level = 1
-var maxLevel = 5
 var count = 0
 var countDown = 20 * 60
 let scoreBoard = []
@@ -289,7 +292,7 @@ function drawChain() {
 function drawLevel() {
   ctx.font = '30px ArcadeClassic'
   ctx.fillStyle = 'white'
-  ctx.fillText('Level: ' + level, 870, 20)
+  ctx.fillText('Level: ' + difficulty, 790, 20)
 }
 
 function drawStartScreen() {
