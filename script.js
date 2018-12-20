@@ -311,7 +311,7 @@ function drawStartScreen() {
 function drawScoreBoard() {
   ref.on('value', gotData, errData)
 
-  let y = 290
+  let y = 230
   let position = 1
   var keys = Object.keys(scoreBoard)
   for (var i = 0; i < keys.length; i++) {
@@ -321,7 +321,7 @@ function drawScoreBoard() {
     ctx.fillStyle = 'white'
     ctx.font = '30px ArcadeClassic'
 
-    ctx.fillText('Leaderboard Scores:', 340, 220)
+    ctx.fillText('Leaderboard Scores:', 340, 210)
     ctx.font = '24px ArcadeClassic'
 
     ctx.fillText(position + '.  ' + name, 420, y)
