@@ -7,5 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "stephen broadhurst",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "next": "^12.1.0",
+    "react": "^17.0.2"
+  }
 }
